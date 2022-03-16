@@ -2,7 +2,6 @@ import './App.css'
 import logo from './logo.svg'
 
 function App() {
-  // const { loading, error, data } = useQuery(GET_ARTICLES)
   return (
     <div className='App'>
       <header className='App-header'>

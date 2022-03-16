@@ -1,12 +1,32 @@
 overwrite: true
-schema: 'http://localhost:3000/graphql'
+schema: './github.schema.graphql'
 documents: 'src/graphql/*.gql'
 generates:
-  src/generated/graphql.tsx:
+  src/generated/types.ts:
     plugins:
-      - 'typescript'
-      - 'typescript-operations'
-      - 'typescript-react-apollo'
-  ./graphql.schema.json:
+      - typescript
+  src/generated/operations.ts:
+    preset: import-types
+    presetConfig:
+      typesPath: ./types
     plugins:
-      - 'introspection'
+      - typescript-operations
+  src/generated/graphql.ts:
+    preset: import-types
+    presetConfig:
+      typesPath: ./operations
+    plugins:
+      - typescript-react-apollo
+  src/generated/document.ts:
+    preset: import-types
+    presetConfig:
+      typesPath: ./types
+    plugins:
+      - typescript-operations
+      - typed-document-node
+  src/generated/introspection.json:
+    plugins:
+      - introspection
+hooks:
+  afterAllFileWrite:
+    - prettier --write

@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.5.10",
-    "@graphql-codegen/cli": "^2.6.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -46,9 +45,12 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/import-types-preset": "^2.1.14",
     "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typed-document-node": "^2.2.7",
     "@graphql-codegen/typescript": "2.4.7",
     "@graphql-codegen/typescript-operations": "2.3.4",
-    "@graphql-codegen/typescript-react-apollo": "3.2.10"
+    "@graphql-codegen/typescript-react-apollo": "3.2.10",
+    "prettier": "^2.6.0"
   }
 }
