@@ -1,0 +1,12 @@
+query GetArticle {
+  currentUser {
+    articles {
+      edges {
+        node {
+          title
+          body
+        }
+      }
+    }
+  }
+}

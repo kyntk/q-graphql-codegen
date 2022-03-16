@@ -1,14 +1,5 @@
-import { gql } from '@apollo/client'
 import './App.css'
 import logo from './logo.svg'
-
-const GET_ARTICLES = gql`
-  query GetArticle {
-    article {
-      name
-    }
-  }
-`
 
 function App() {
   // const { loading, error, data } = useQuery(GET_ARTICLES)
